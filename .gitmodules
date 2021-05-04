@@ -1,0 +1,3 @@
+[submodule "external/pugixml"]
+	path = external/pugixml
+	url = git@github.com:zeux/pugixml.git
