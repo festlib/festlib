@@ -38,3 +38,6 @@ compile_commands.json
 # doc, currently this is not documents for the library but for
 # information about writing the project
 doc/
+
+# vim
+*.swp
