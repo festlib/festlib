@@ -42,6 +42,14 @@ namespace festlib {
       return result;
     }
 
+    // reload the file, the xml_document destroys the
+    // existing document tree and tries to load new tree.
+    bool Xml_reader::reload_file()
+    {
+      result = false;
+      return load_file();
+    }
+
   } // namespace
 } // namespace
 

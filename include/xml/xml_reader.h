@@ -43,6 +43,7 @@ namespace festlib {
         Xml_reader operator=(Xml_reader const&) = delete;
         pugi::xml_document get_document() const;
         bool load_file();
+        bool reload_file();
       private:
         std::string file_path;
         pugi::xml_document doc;
