@@ -35,7 +35,7 @@ namespace festlib {
     {
       if(!result) {
         // .load_file() returns a pugi::xml_result, the pugixml
-        // docs says that this is equal to a built in true/false
+        // docs says that this is equal to a built-in bool
         result = doc.load_file(file_path.c_str());
       }
       return result;
@@ -43,3 +43,4 @@ namespace festlib {
 
   } // namespace
 } // namespace
+
