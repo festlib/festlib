@@ -7,3 +7,5 @@ add_executable(tests
 
 target_link_libraries(tests PRIVATE festlib Catch2::Catch2WithMain)
 
+configure_file(${CMAKE_SOURCE_DIR}/resources/fest251_inst.xml ${CMAKE_BINARY_DIR}/tests/ COPYONLY)
+
