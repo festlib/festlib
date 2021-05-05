@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_subdirectory(external/pugixml)
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
     )
 
@@ -17,6 +17,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)
 
 add_subdirectory(tests)
 
-add_test(NAME testfestlib COMMAND tests/tests)
+add_test(NAME testfestlib COMMAND tests)
 
 # TODO: need to add install components and version control
