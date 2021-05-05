@@ -41,7 +41,6 @@ namespace festlib {
         Xml_reader(Xml_reader const&) = delete; // pugi::xml_document is a non-copyable
                                                 // document, so should this class be.
         Xml_reader operator=(Xml_reader const&) = delete;
-        pugi::xml_document get_document() const;
         bool load_file();
         bool reload_file();
       private:
