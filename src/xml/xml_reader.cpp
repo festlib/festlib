@@ -31,6 +31,7 @@ namespace festlib {
     {
     }
 
+    // handles loading the xml file into memory
     bool Xml_reader::load_file()
     {
       if(!result) {
