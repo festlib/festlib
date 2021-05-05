@@ -15,8 +15,9 @@ add_library(${PROJECT_NAME} SHARED
 
 target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)
 
+enable_testing()
+
 add_subdirectory(tests)
 
-add_test(NAME testfestlib COMMAND tests)
 
 # TODO: need to add install components and version control
