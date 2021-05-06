@@ -35,7 +35,8 @@ namespace fest {
     struct CV {
       std::string V;
       std::string DN;
-      std::string S;
+      std::string S; // object identifier, a constant part 2.16.578.1.12.4.1.1.xxxx
+                     // xxxx is the variable part
     };
 
   } // namespace
