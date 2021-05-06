@@ -25,6 +25,7 @@
 #define FEST_TYPES_CS_H
 
 #include <string>
+#include <string_view>
 
 namespace fest {
   namespace types {
@@ -32,7 +33,11 @@ namespace fest {
     // Coded Simple Value
     // CS is a specific datatype for use in message exchange within FEST
     // V and DN is mandatory
-    struct CS {
+    struct Cs {
+      explicit Cs(std::string_view V, std::string_view DN)
+        : V{V}, DN{DN}
+      {}
+
       std::string V;
       std::string DN;
     };
