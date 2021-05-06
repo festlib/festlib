@@ -21,33 +21,23 @@
 // SOFTWARE.
 //
 
-#ifndef FEST_TYPES_CV_H
-#define FEST_TYPES_CV_H
+#ifndef FEST_TYPES_OID_H
+#define FEST_TYPES_OID_H
 
-#include "types/oid.h"
 #include <string>
 #include <string_view>
 
 namespace fest {
   namespace types {
 
-    // Coded Value
-    // CV is a specific datatype for use in message exhange withing FEST
-    // V, DN and S is mandatory
-    struct Cv {
-      explicit Cv(std::string_view V, std::string_view DN,
-          types::Oid const& S)
-        : V{V}, DN{DN}, S{S}
+    // Object identifier
+    // example of a OID is 2.16.578.1.12.4.1.1.xxxx,
+    // where the numbers is constant and the xxxx part is variable
+    struct Oid {
+      explicit Oid(std::string_view S)
+        : S{S}
       {}
-      explicit Cv(std::string_view V, std::string_view DN,
-          types::Oid const& S, std::string_view OT)
-        : V{V}, DN{DN}, S{S}, OT{OT}
-      {}
-
-      std::string V;
-      std::string DN;
-      types::Oid S;
-      std::string OT;
+      std::string S;
     };
 
   } // namespace
