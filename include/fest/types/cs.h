@@ -30,8 +30,8 @@ namespace fest {
   namespace types {
 
     // Coded Simple Value
-    // CS is a specific datatype for using in message exchange within FEST
-    // V and DN is mandatory.
+    // CS is a specific datatype for use in message exchange within FEST
+    // V and DN is mandatory
     struct CS {
       std::string V;
       std::string DN;
