@@ -21,13 +21,13 @@
 // SOFTWARE.
 //
 
-#ifndef FEST_TYPES_IDREF_H
-#define FEST_TYPES_IDREF_H
+#ifndef FESTLIB_TYPES_IDREF_H
+#define FESTLIB_TYPES_IDREF_H
 
 #include <string>
 #include <string_view>
 
-namespace fest {
+namespace festlib {
   namespace types {
 
     // identification referance

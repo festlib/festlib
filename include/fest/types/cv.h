@@ -21,14 +21,14 @@
 // SOFTWARE.
 //
 
-#ifndef FEST_TYPES_CV_H
-#define FEST_TYPES_CV_H
+#ifndef FESTLIB_TYPES_CV_H
+#define FESTLIB_TYPES_CV_H
 
 #include "oid.h"
 #include <string>
 #include <string_view>
 
-namespace fest {
+namespace festlib {
   namespace types {
 
     // Coded Value

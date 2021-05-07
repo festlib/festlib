@@ -21,13 +21,13 @@
 // SOFTWARE.
 //
 
-#ifndef FEST_TYPES_CS_H
-#define FEST_TYPES_CS_H
+#ifndef FESTLIB_TYPES_CS_H
+#define FESTLIB_TYPES_CS_H
 
 #include <string>
 #include <string_view>
 
-namespace fest {
+namespace festlib {
   namespace types {
 
     // Coded Simple Value
