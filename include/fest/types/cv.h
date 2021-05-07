@@ -24,7 +24,7 @@
 #ifndef FEST_TYPES_CV_H
 #define FEST_TYPES_CV_H
 
-#include "types/oid.h"
+#include "oid.h"
 #include <string>
 #include <string_view>
 
