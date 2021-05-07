@@ -11,6 +11,7 @@ add_subdirectory(external/pugixml)
 
 add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
+    src/fest/legemiddel.cpp
     )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)
