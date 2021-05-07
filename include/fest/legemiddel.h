@@ -36,7 +36,7 @@
 namespace festlib {
   namespace fest {
 
-    // Abstract class.
+    // Pure abstract class.
     // Its a common class for
     // the four catalogs in FEST.
     // The name Legemiddel is chosen and mean Drugs
