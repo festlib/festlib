@@ -32,6 +32,7 @@ namespace festlib {
 
     // identification referance
     struct Idref {
+      explicit Idref() = default;
       explicit Idref(std::string_view Id)
         : Id{Id}
       {}
