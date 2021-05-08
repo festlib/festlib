@@ -62,10 +62,6 @@ namespace festlib {
         types::Cs TypeSoknadSlv; // Apply to SLV/Norwegian Drug Agency or not
         bool Opioidsoknad = false; // Opioid application. False is default because theres only a few of them
         types::Cv SvartTrekant; // Drugs with special attention
-      private:
-        // TODO: make a class Administreringlegemiddel and Legemiddelpakningbyttegruppe.
-        // and add them to here.
-        RefRefusjon Refusjon;
     };
 
   } // namespace
