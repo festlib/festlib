@@ -24,8 +24,6 @@
 // names are chosen in Norwegian because the xml FEST file
 // uses Norwegian nomenclature
 
-// INCOMPLETE FILE
-
 #ifndef FESTLIB_LEGEMIDDEL_H
 #define FESTLIB_LEGEMIDDEL_H
 
