@@ -32,6 +32,7 @@
 #include "types/cv.h"
 #include "types/cs.h"
 #include "types/idref.h"
+#include "refrefusjon.h"
 
 namespace festlib {
   namespace fest {
@@ -62,8 +63,9 @@ namespace festlib {
         bool Opioidsoknad = false; // Opioid application. False is default because theres only a few of them
         types::Cv SvartTrekant; // Drugs with special attention
       private:
-        // TODO: make a class Refusjon, Administreringlegemiddel and Legemiddelpakningbyttegruppe.
+        // TODO: make a class Administreringlegemiddel and Legemiddelpakningbyttegruppe.
         // and add them to here.
+        RefRefusjon Refusjon;
     };
 
   } // namespace
