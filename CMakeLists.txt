@@ -12,6 +12,7 @@ add_subdirectory(external/pugixml)
 add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
     src/fest/refrefusjon.cpp
+    src/fest/m30.cpp
     src/fest/legemiddel.cpp
     )
 
