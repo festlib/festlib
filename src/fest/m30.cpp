@@ -36,5 +36,3 @@ namespace festlib {
 
   } // namespace
 } // namespace
-
-#endif
