@@ -33,6 +33,10 @@ namespace festlib {
   namespace types {
 
     struct DateTime {
+      explicit DateTime()
+        : date{}
+      {}
+
       explicit DateTime(std::string_view date)
         : date{date}
       {}
