@@ -27,11 +27,11 @@ namespace festlib {
   namespace fest {
 
     M30::M30(types::DateTime HentetDato, types::Date GyldigFradatoHelfo)
-      : HenetDato{HentetDato}, GyldigFradatoHelfo{GyldigFradatoHelfo}
+      : HentetDato{HentetDato}, GyldigFradatoHelfo{GyldigFradatoHelfo}
     {}
 
     M30::M30(types::DateTime HentetDato)
-      : HenetDato{HentetDato}, GyldigFradatoHelfo{}
+      : HentetDato{HentetDato}, GyldigFradatoHelfo{}
     {}
 
   } // namespace
