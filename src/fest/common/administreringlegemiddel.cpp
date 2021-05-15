@@ -34,6 +34,10 @@ namespace festlib {
               types::Cs const& EnhetDosering, std::vector<types::Cv> const& Kortdose,
               std::vector<types::Cv> const& ForhandsregelInntak,
               std::vector<types::Cv> const& BruksomradeEtikett)
+        : Blandingsveske{Blandingsveske}, Administrasjonsvei{Administrasjonsvei},
+        KanApnes{KanApnes}, KanKnuses{KanKnuses}, Bolus{Bolus}, InjeksjonshastighetBolus{InjeksjonshastighetBolus},
+        Deling{Deling}, EnhetDosering{EnhetDosering}, Kortdose{Kortdose},
+        ForhandsregelInntak{ForhandsregelInntak}, BruksomradeEtikett{BruksomradeEtikett}
       {}
 
     } // namespace
