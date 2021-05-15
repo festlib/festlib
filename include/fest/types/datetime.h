@@ -32,12 +32,9 @@
 namespace festlib {
   namespace types {
 
+    // stores the
     struct DateTime {
       explicit DateTime() = default;
-      explicit DateTime()
-        : date{}
-      {}
-
       explicit DateTime(std::string_view date)
         : date{date}
       {}
