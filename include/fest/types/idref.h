@@ -28,18 +28,20 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // identification referance
-    struct Idref {
-      explicit Idref() = default;
-      explicit Idref(std::string_view Id)
-        : Id{Id}
-      {}
+      // identification referance
+      struct Idref {
+        explicit Idref() = default;
+        explicit Idref(std::string_view Id)
+          : Id{Id}
+        {}
 
-      std::string Id;
-    };
+        std::string Id;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

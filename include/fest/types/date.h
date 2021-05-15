@@ -30,17 +30,19 @@
 // TODO: make this a actuall date class not std::string
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    struct Date {
-      explicit Date() = default;
-      explicit Date(std::string_view Time)
-        : Time{Time}
-      {}
+      struct Date {
+        explicit Date() = default;
+        explicit Date(std::string_view Time)
+          : Time{Time}
+        {}
 
-      std::string Time;
-    };
+        std::string Time;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

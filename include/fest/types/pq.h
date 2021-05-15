@@ -28,19 +28,21 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // Physical Quantum
-    struct Pq {
-      explicit Pq() = default;
-      explicit Pq(double V, std::string_view DN)
-        : V{V}, DN{DN}
-      {}
+      // Physical Quantum
+      struct Pq {
+        explicit Pq() = default;
+        explicit Pq(double V, std::string_view DN)
+          : V{V}, DN{DN}
+        {}
 
-      double V; // TODO: check if there is some out of band values in the Fest xml
-      std::string DN;
-    };
+        double V; // TODO: check if there is some out of band values in the Fest xml
+        std::string DN;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

@@ -28,20 +28,22 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // Object identifier
-    // example of a OID is 2.16.578.1.12.4.1.1.xxxx,
-    // where the numbers is constant and the xxxx part is variable
-    struct Oid {
-      explicit Oid() = default;
-      explicit Oid(std::string_view S)
-        : S{S}
-      {}
+      // Object identifier
+      // example of a OID is 2.16.578.1.12.4.1.1.xxxx,
+      // where the numbers is constant and the xxxx part is variable
+      struct Oid {
+        explicit Oid() = default;
+        explicit Oid(std::string_view S)
+          : S{S}
+        {}
 
-      std::string S;
-    };
+        std::string S;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

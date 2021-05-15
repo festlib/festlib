@@ -30,18 +30,20 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // stores the
-    struct DateTime {
-      explicit DateTime() = default;
-      explicit DateTime(std::string_view date)
-        : date{date}
-      {}
+      // stores the
+      struct DateTime {
+        explicit DateTime() = default;
+        explicit DateTime(std::string_view date)
+          : date{date}
+        {}
 
-      std::string date;
-    };
+        std::string date;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

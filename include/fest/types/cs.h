@@ -31,21 +31,23 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // Coded Simple Value
-    // CS is a specific datatype for use in message exchange within FEST
-    // V and DN is mandatory
-    struct Cs {
-      explicit Cs() = default;
-      explicit Cs(std::string_view V, std::string_view DN)
-        : V{V}, DN{DN}
-      {}
+      // Coded Simple Value
+      // CS is a specific datatype for use in message exchange within FEST
+      // V and DN is mandatory
+      struct Cs {
+        explicit Cs() = default;
+        explicit Cs(std::string_view V, std::string_view DN)
+          : V{V}, DN{DN}
+        {}
 
-      std::string V;
-      std::string DN;
-    };
+        std::string V;
+        std::string DN;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

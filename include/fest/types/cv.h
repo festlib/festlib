@@ -29,28 +29,30 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // Coded Value
-    // CV is a specific datatype for use in message exhange withing FEST
-    // V, DN and S is mandatory
-    struct Cv {
-      explicit Cv() = default;
-      explicit Cv(std::string_view V, std::string_view DN,
-          types::Oid const& S)
-        : V{V}, DN{DN}, S{S}
-      {}
-      explicit Cv(std::string_view V, std::string_view DN,
-          types::Oid const& S, std::string_view OT)
-        : V{V}, DN{DN}, S{S}, OT{OT}
-      {}
+      // Coded Value
+      // CV is a specific datatype for use in message exhange withing FEST
+      // V, DN and S is mandatory
+      struct Cv {
+        explicit Cv() = default;
+        explicit Cv(std::string_view V, std::string_view DN,
+            types::Oid const& S)
+          : V{V}, DN{DN}, S{S}
+        {}
+        explicit Cv(std::string_view V, std::string_view DN,
+            types::Oid const& S, std::string_view OT)
+          : V{V}, DN{DN}, S{S}, OT{OT}
+        {}
 
-      std::string V;
-      std::string DN;
-      types::Oid S;
-      std::string OT;
-    };
+        std::string V;
+        std::string DN;
+        types::Oid S;
+        std::string OT;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 

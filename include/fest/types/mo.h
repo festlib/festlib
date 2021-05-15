@@ -28,19 +28,21 @@
 #include <string_view>
 
 namespace festlib {
-  namespace types {
+  namespace fest {
+    namespace types {
 
-    // Monetary
-    struct Mo {
-      explicit Mo() = default;
-      explicit Mo(double V, std::string_view U)
-        : V{V}, U{U}}
-      {}
+      // Monetary
+      struct Mo {
+        explicit Mo() = default;
+        explicit Mo(double V, std::string_view U)
+          : V{V}, U{U}
+        {}
 
-      double V; // TODO: check if there is some out of band values in the Fest xml
-      std::string U;
-    };
+        double V; // TODO: check if there is some out of band values in the Fest xml
+        std::string U;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 
