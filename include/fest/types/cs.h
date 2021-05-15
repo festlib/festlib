@@ -21,6 +21,9 @@
 // SOFTWARE.
 //
 
+// TODO: need to lookup that = default in constructors actually initialize all
+// the private members or not.
+
 #ifndef FESTLIB_TYPES_CS_H
 #define FESTLIB_TYPES_CS_H
 
