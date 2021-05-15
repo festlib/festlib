@@ -21,43 +21,20 @@
 // SOFTWARE.
 //
 
-#ifndef FESTLIB_ADMINISTRERINGLEGEMIDDEL_H
-#define FESTLIB_ADMINISTRERINGLEGEMIDDEL_H
-
-#include "types/cv.h"
-#include "types/cs.h"
-#include "types/idref.h"
-#include <vector>
+#include "fest/administreringlegemiddel.h"
 
 namespace festlib {
   namespace fest {
 
-    class AdministreringLegemiddel {
-      public:
-        explicit AdministreringLegemiddel() = default;
-        explicit AdministreringLegemiddel(bool Blandingsveske, types::Cv const& Administrasjonsvei,
+    // TODO: use std::move insted of const& ?
+    AdministreringLegemiddel::AdministreringLegemiddel(bool Blandingsveske, types::Cv const& Administrasjonsvei,
             types::Cs const& KanApnes, types::Cs const& KanKnuses, types::Cs const& Bolus,
             types::Cs const& InjeksjonshastighetBolus, types::Cs const& Deling,
             types::Cs const& EnhetDosering, std::vector<types::Cv> const& Kortdose,
             std::vector<types::Cv> const& ForhandsregelInntak,
-            std::vector<types::Cv> const& BruksomradeEtikett);
-      private:
-        bool Blandingsveske;
-        types::Idref BlandingsvekseForslag; // TODO: check the name of this entry
-                                            // could not find it in the xml file
-        types::Cv Administrasjonsvei;
-        types::Cs KanApnes;
-        types::Cs KanKnuses;
-        types::Cs Bolus;
-        types::Cs InjeksjonshastighetBolus;
-        types::Cs Deling;
-        types::Cs EnhetDosering;
-        std::vector<types::Cv> Kortdose;
-        std::vector<types::Cv> ForhandsregelInntak;
-        std::vector<types::Cv> BruksomradeEtikett;
-    };
+            std::vector<types::Cv> const& BruksomradeEtikett)
+    {}
 
   } // namespace
 } // namespace
 
-#endif

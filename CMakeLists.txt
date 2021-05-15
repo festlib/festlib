@@ -14,6 +14,7 @@ add_library(${PROJECT_NAME} SHARED
     src/fest/refrefusjon.cpp
     src/fest/m30.cpp
     src/fest/enkeltoppforing.cpp
+    src/fest/administreringlegemiddel.cpp
     src/fest/legemiddel.cpp
     )
 
