@@ -34,6 +34,7 @@ namespace festlib {
     // CS is a specific datatype for use in message exchange within FEST
     // V and DN is mandatory
     struct Cs {
+      explicit Cs() = default;
       explicit Cs(std::string_view V, std::string_view DN)
         : V{V}, DN{DN}
       {}

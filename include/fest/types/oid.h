@@ -34,6 +34,7 @@ namespace festlib {
     // example of a OID is 2.16.578.1.12.4.1.1.xxxx,
     // where the numbers is constant and the xxxx part is variable
     struct Oid {
+      explicit Oid() = default;
       explicit Oid(std::string_view S)
         : S{S}
       {}

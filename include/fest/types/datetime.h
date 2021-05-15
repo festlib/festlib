@@ -33,6 +33,7 @@ namespace festlib {
   namespace types {
 
     struct DateTime {
+      explicit DateTime() = default;
       explicit DateTime()
         : date{}
       {}

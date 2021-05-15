@@ -32,6 +32,7 @@ namespace festlib {
 
     // Physical Quantum
     struct Pq {
+      explicit Pq() = default;
       explicit Pq(double V, std::string_view DN)
         : V{V}, DN{DN}
       {}

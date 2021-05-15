@@ -32,6 +32,7 @@ namespace festlib {
 
     // Monetary
     struct Mo {
+      explicit Mo() = default;
       explicit Mo(double V, std::string_view U)
         : V{V}, U{U}}
       {}
