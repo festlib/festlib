@@ -21,16 +21,20 @@
 // SOFTWARE.
 //
 
-#include "fest/enkeltoppforing.h"
+#include "fest/common/m30.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    Enkeltoppforing::Enkeltoppforing(std::string_view Id,
-        types::DateTime const& Tidspunkt, types::Cs const& Status)
-      : Id{Id}, Tidspunkt{Tidspunkt}, Status{Status}
-    {}
+      M30::M30(types::DateTime HentetDato, types::Date GyldigFradatoHelfo)
+        : HentetDato{HentetDato}, GyldigFradatoHelfo{GyldigFradatoHelfo}
+      {}
 
+      M30::M30(types::DateTime HentetDato)
+        : HentetDato{HentetDato}, GyldigFradatoHelfo{}
+      {}
+
+    } // namespace
   } // namespace
 } // namespace
-

@@ -21,27 +21,22 @@
 // SOFTWARE.
 //
 
-#include "fest/refrefusjon.h"
+#include "fest/common/administreringlegemiddel.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
+      // TODO: use std::move insted of const& ?
+      AdministreringLegemiddel::AdministreringLegemiddel(bool Blandingsveske, types::Cv const& Administrasjonsvei,
+              types::Cs const& KanApnes, types::Cs const& KanKnuses, types::Cs const& Bolus,
+              types::Cs const& InjeksjonshastighetBolus, types::Cs const& Deling,
+              types::Cs const& EnhetDosering, std::vector<types::Cv> const& Kortdose,
+              std::vector<types::Cv> const& ForhandsregelInntak,
+              std::vector<types::Cv> const& BruksomradeEtikett)
+      {}
 
-    RefRefusjon::RefRefusjon()
-      : RefRefusjonsgruppe{}, GyldigFraDato{}, GyldigTilDato{}, ForskrivesTilDato{},
-      UtleveresTilDato{}
-    {}
-
-    RefRefusjon::RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato)
-      : RefRefusjonsgruppe{RefRefusjonsgruppe}, GyldigFraDato{GyldigFraDato},
-      GyldigTilDato{}, ForskrivesTilDato{}, UtleveresTilDato{}
-    {}
-
-    RefRefusjon::RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato,
-            types::Date GyldigTilDato, types::Date ForskrivesTilDato, types::Date UtleveresTilDato)
-      : RefRefusjonsgruppe{}, GyldigFraDato{GyldigFraDato}, GyldigTilDato{GyldigTilDato},
-      ForskrivesTilDato{ForskrivesTilDato}, UtleveresTilDato{UtleveresTilDato}
-    {}
-
+    } // namespace
   } // namespace
 } // namespace
+

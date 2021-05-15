@@ -21,20 +21,32 @@
 // SOFTWARE.
 //
 
-#include "fest/administreringlegemiddel.h"
+#ifndef FESTLIB_ENKELTOPPFORING_H
+#define FESTLIB_ENKELTOPPFORING_H
+
+#include "fest/types/datetime.h"
+#include "fest/types/cs.h"
+#include <string>
+#include <string_view>
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    // TODO: use std::move insted of const& ?
-    AdministreringLegemiddel::AdministreringLegemiddel(bool Blandingsveske, types::Cv const& Administrasjonsvei,
-            types::Cs const& KanApnes, types::Cs const& KanKnuses, types::Cs const& Bolus,
-            types::Cs const& InjeksjonshastighetBolus, types::Cs const& Deling,
-            types::Cs const& EnhetDosering, std::vector<types::Cv> const& Kortdose,
-            std::vector<types::Cv> const& ForhandsregelInntak,
-            std::vector<types::Cv> const& BruksomradeEtikett)
-    {}
+      // Enkeltoppføring is the top entry. It says if the entry is valid or not
+      // and what time it got valid. It also includes a unique Id.
+      class Enkeltoppforing {
+        public:
+          explicit Enkeltoppforing(std::string_view Id,
+              types::DateTime const& Tidspunkt, types::Cs const& Status);
+        private:
+          std::string Id;
+          types::DateTime Tidspunkt;
+          types::Cs Status;
+      };
 
+    } // namespace
   } // namespace
 } // namespace
 
+#endif

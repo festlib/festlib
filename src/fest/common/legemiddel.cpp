@@ -21,18 +21,24 @@
 // SOFTWARE.
 //
 
-#include "fest/m30.h"
+// INCOMPLETE FILE
+
+#include "fest/common/legemiddel.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    M30::M30(types::DateTime HentetDato, types::Date GyldigFradatoHelfo)
-      : HentetDato{HentetDato}, GyldigFradatoHelfo{GyldigFradatoHelfo}
-    {}
+      Legemiddel::Legemiddel(types::Cv const& Atc, std::string_view NavnFormStyrke,
+              types::Cs const& Reseptgruppe, types::Cv const& LegemiddelformKort,
+              types::Idref const& RefVilkar, types::Cs const& Preparattype,
+              types::Cs const& TypeSoknadSlv, bool Opioidsoknad,
+              types::Cv const& SvartTrekant)
+        : Atc{Atc}, NavnFormStyrke{NavnFormStyrke}, Reseptgruppe{Reseptgruppe},
+        LegemiddelformKort{LegemiddelformKort}, RefVilkar{RefVilkar}, Preparattype{Preparattype},
+        TypeSoknadSlv{TypeSoknadSlv}, Opioidsoknad{Opioidsoknad}, SvartTrekant{SvartTrekant}
+      {}
 
-    M30::M30(types::DateTime HentetDato)
-      : HentetDato{HentetDato}, GyldigFradatoHelfo{}
-    {}
-
+    } // namespace
   } // namespace
 } // namespace

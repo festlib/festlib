@@ -11,11 +11,11 @@ add_subdirectory(external/pugixml)
 
 add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
-    src/fest/refrefusjon.cpp
-    src/fest/m30.cpp
-    src/fest/enkeltoppforing.cpp
-    src/fest/administreringlegemiddel.cpp
-    src/fest/legemiddel.cpp
+    src/fest/common/refrefusjon.cpp
+    src/fest/common/m30.cpp
+    src/fest/common/enkeltoppforing.cpp
+    src/fest/common/administreringlegemiddel.cpp
+    src/fest/common/legemiddel.cpp
     )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)

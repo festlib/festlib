@@ -21,33 +21,31 @@
 // SOFTWARE.
 //
 
-#ifndef FESTLIB_REFREFUSJON_H
-#define FESTLIB_REFREFUSJON_H
+// names are chosen in Norwegian because the xml FEST file
+// uses Norwegian nomenclature
 
-#include "types/idref.h"
-#include "types/date.h"
+#ifndef FESTLIB_M30_H
+#define FESTLIB_M30_H
+
+#include "fest/types/datetime.h"
+#include "fest/types/date.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    // RefRefusjon is a part of the pure abstract class Legemiddel
-    // Have a referenace ID to the welfare system to a other catalog in
-    // FEST
-    class RefRefusjon {
-      public:
-        explicit RefRefusjon();
-        explicit RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato);
-        explicit RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato,
-            types::Date GyldigTilDato, types::Date ForskrivesTilDato, types::Date UtleveresTilDato);
-      private:
-        types::Idref RefRefusjonsgruppe;
-        types::Date GyldigFraDato;
-        // these is optional in the xml
-        types::Date GyldigTilDato;
-        types::Date ForskrivesTilDato;
-        types::Date UtleveresTilDato;
-    };
+      // M30 is the TOP of the xml file with information about when the file
+      // was created
+      class M30 {
+        public:
+          explicit M30(types::DateTime HentetDato, types::Date GyldigFradatoHelfo);
+          explicit M30(types::DateTime HentetDato);
+        private:
+          types::DateTime HentetDato;
+          types::Date GyldigFradatoHelfo;
+      };
 
+    } //namespace
   } // namespace
 } // namespace
 

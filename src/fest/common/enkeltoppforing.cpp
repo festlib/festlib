@@ -21,30 +21,18 @@
 // SOFTWARE.
 //
 
-#ifndef FESTLIB_ENKELTOPPFORING_H
-#define FESTLIB_ENKELTOPPFORING_H
-
-#include "types/datetime.h"
-#include "types/cs.h"
-#include <string>
-#include <string_view>
+#include "fest/common/enkeltoppforing.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    // Enkeltoppføring is the top entry. It says if the entry is valid or not
-    // and what time it got valid. It also includes a unique Id.
-    class Enkeltoppforing {
-      public:
-        explicit Enkeltoppforing(std::string_view Id,
-            types::DateTime const& Tidspunkt, types::Cs const& Status);
-      private:
-        std::string Id;
-        types::DateTime Tidspunkt;
-        types::Cs Status;
-    };
+      Enkeltoppforing::Enkeltoppforing(std::string_view Id,
+          types::DateTime const& Tidspunkt, types::Cs const& Status)
+        : Id{Id}, Tidspunkt{Tidspunkt}, Status{Status}
+      {}
 
+    } // namespace
   } // namespace
 } // namespace
 
-#endif

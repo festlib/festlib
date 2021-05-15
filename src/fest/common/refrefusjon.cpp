@@ -21,22 +21,29 @@
 // SOFTWARE.
 //
 
-// INCOMPLETE FILE
-
-#include "fest/legemiddel.h"
+#include "fest/common/refrefusjon.h"
 
 namespace festlib {
   namespace fest {
+    namespace common {
 
-    Legemiddel::Legemiddel(types::Cv const& Atc, std::string_view NavnFormStyrke,
-            types::Cs const& Reseptgruppe, types::Cv const& LegemiddelformKort,
-            types::Idref const& RefVilkar, types::Cs const& Preparattype,
-            types::Cs const& TypeSoknadSlv, bool Opioidsoknad,
-            types::Cv const& SvartTrekant)
-      : Atc{Atc}, NavnFormStyrke{NavnFormStyrke}, Reseptgruppe{Reseptgruppe},
-      LegemiddelformKort{LegemiddelformKort}, RefVilkar{RefVilkar}, Preparattype{Preparattype},
-      TypeSoknadSlv{TypeSoknadSlv}, Opioidsoknad{Opioidsoknad}, SvartTrekant{SvartTrekant}
-    {}
 
+      RefRefusjon::RefRefusjon()
+        : RefRefusjonsgruppe{}, GyldigFraDato{}, GyldigTilDato{}, ForskrivesTilDato{},
+        UtleveresTilDato{}
+      {}
+
+      RefRefusjon::RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato)
+        : RefRefusjonsgruppe{RefRefusjonsgruppe}, GyldigFraDato{GyldigFraDato},
+        GyldigTilDato{}, ForskrivesTilDato{}, UtleveresTilDato{}
+      {}
+
+      RefRefusjon::RefRefusjon(types::Idref RefRefusjonsgruppe, types::Date GyldigFraDato,
+              types::Date GyldigTilDato, types::Date ForskrivesTilDato, types::Date UtleveresTilDato)
+        : RefRefusjonsgruppe{}, GyldigFraDato{GyldigFraDato}, GyldigTilDato{GyldigTilDato},
+        ForskrivesTilDato{ForskrivesTilDato}, UtleveresTilDato{UtleveresTilDato}
+      {}
+
+    } // namespace
   } // namespace
 } // namespace
