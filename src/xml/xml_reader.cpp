@@ -26,8 +26,8 @@
 namespace festlib {
   namespace xml {
 
-    Xml_reader::Xml_reader(std::string_view file_path)
-      : file_path{file_path}, doc(), result{false} //, container()
+    Xml_reader::Xml_reader(std::string_view xml_file)
+      : xml_file{xml_file}, doc(), result{false} //, container()
     {
     }
 
@@ -37,7 +37,7 @@ namespace festlib {
       if(!result) {
         // .load_file() returns a pugi::xml_result, the pugixml
         // docs says that this is equal to a built-in bool
-        result = doc.load_file(file_path.c_str());
+        result = doc.load_file(xml_file.c_str());
       }
       return result;
     }

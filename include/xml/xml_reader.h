@@ -37,14 +37,14 @@ namespace festlib {
     // pugi::xml_document.
     class Xml_reader {
       public:
-        explicit Xml_reader(std::string_view file_path);
+        explicit Xml_reader(std::string_view xml_file);
         Xml_reader(Xml_reader const&) = delete; // pugi::xml_document is a non-copyable
                                                 // document, so should this class be.
         Xml_reader operator=(Xml_reader const&) = delete;
         bool load_file();
         bool reload_file();
       private:
-        std::string file_path;
+        std::string xml_file;
         pugi::xml_document doc;
         bool result;
         //FestContainer container;
