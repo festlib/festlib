@@ -18,6 +18,7 @@ add_library(${PROJECT_NAME} SHARED
     src/fest/common/legemiddelmerkevare.cpp
     src/fest/common/sortertvirkestoffmedstyrke.cpp
     src/fest/common/produktinfo.cpp
+    src/fest/common/reseptgyldighet.cpp
     src/fest/types/sortering.cpp
     src/fest/common/legemiddel.cpp
     )
