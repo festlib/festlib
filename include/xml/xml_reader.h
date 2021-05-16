@@ -30,6 +30,8 @@
 #include <string_view>
 #include <pugixml.hpp>
 
+#include <iostream>
+
 namespace festlib {
   namespace xml {
 
@@ -43,6 +45,7 @@ namespace festlib {
         Xml_reader operator=(Xml_reader const&) = delete;
         bool load_file();
         bool reload_file();
+        void print() const;
       private:
         std::string xml_file;
         pugi::xml_document doc;

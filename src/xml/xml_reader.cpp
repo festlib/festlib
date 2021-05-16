@@ -50,6 +50,20 @@ namespace festlib {
       return load_file();
     }
 
+    void Xml_reader::print() const
+    {
+      using namespace pugi;
+
+      xml_node merker = doc.child("FEST").child("KatLegemiddelMerkevare");
+
+      for(xml_node tool : merker.children("OppfLegemiddelMerkevare")) {
+        for(xml_attribute attr : tool.attributes()) {
+          std::cout << attr.value() << '\n';
+        }
+      }
+    }
+
+
   } // namespace
 } // namespace
 

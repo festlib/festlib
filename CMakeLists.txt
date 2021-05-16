@@ -11,7 +11,6 @@ add_subdirectory(external/pugixml)
 
 add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
-    src/xml/xml_parser.cpp
     src/fest/common/refrefusjon.cpp
     src/fest/common/m30.cpp
     src/fest/common/enkeltoppforing.cpp
