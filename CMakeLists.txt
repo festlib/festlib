@@ -11,6 +11,7 @@ add_subdirectory(external/pugixml)
 
 add_library(${PROJECT_NAME} SHARED
     src/xml/xml_reader.cpp
+    src/xml/xml_parser.cpp
     src/fest/common/refrefusjon.cpp
     src/fest/common/m30.cpp
     src/fest/common/enkeltoppforing.cpp
@@ -20,8 +21,8 @@ add_library(${PROJECT_NAME} SHARED
     src/fest/common/produktinfo.cpp
     src/fest/common/reseptgyldighet.cpp
     src/fest/common/preparatomtaleavsnitt.cpp
-    src/fest/types/sortering.cpp
     src/fest/common/legemiddel.cpp
+    src/fest/types/sortering.cpp
     )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)
