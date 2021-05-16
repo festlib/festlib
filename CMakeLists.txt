@@ -16,6 +16,7 @@ add_library(${PROJECT_NAME} SHARED
     src/fest/common/enkeltoppforing.cpp
     src/fest/common/administreringlegemiddel.cpp
     src/fest/common/legemiddelmerkevare.cpp
+    src/fest/common/sortertvirkestoffmedstyrke.cpp
     src/fest/types/sortering.cpp
     src/fest/common/legemiddel.cpp
     )
