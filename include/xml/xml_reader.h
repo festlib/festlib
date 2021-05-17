@@ -21,6 +21,8 @@
 // SOFTWARE.
 //
 
+// TODO: remember to reserve space for the container
+
 #ifndef FESTLIB_XML_READER_H
 #define FESTLIB_XML_READER_H
 
