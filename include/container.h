@@ -28,12 +28,9 @@
 
 namespace festlib {
 
-  // forward declaration
-  // contains all the catalogs in FEST
-  class Fest;
-
   // default container for festlib
-  using FestContainer = std::vector<Fest>;
+  template<typename T>
+  using FestContainer = std::vector<T>;
 
 } // namespace
 
