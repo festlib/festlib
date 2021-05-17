@@ -22,6 +22,7 @@ add_library(${PROJECT_NAME} SHARED
     src/fest/common/preparatomtaleavsnitt.cpp
     src/fest/common/legemiddel.cpp
     src/fest/types/sortering.cpp
+    src/fest/catalog/oppflegemiddelmerkevare.cpp
     )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC pugixml-static)
