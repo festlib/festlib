@@ -39,6 +39,9 @@ namespace festlib {
         TypeSoknadSlv{TypeSoknadSlv}, Opioidsoknad{Opioidsoknad}, SvartTrekant{SvartTrekant}
       {}
 
+      Legemiddel::~Legemiddel()
+      {}
+
     } // namespace
   } // namespace
 } // namespace
