@@ -37,6 +37,7 @@ namespace festlib {
       // and what time it got valid. It also includes a unique Id.
       class Enkeltoppforing {
         public:
+          explicit Enkeltoppforing() = default;
           explicit Enkeltoppforing(std::string_view Id,
               types::DateTime const& Tidspunkt, types::Cs const& Status);
         private:
